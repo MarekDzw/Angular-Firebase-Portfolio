@@ -1,0 +1,49 @@
+@import '../../styles.scss';
+.portfolio-item {
+  width: 100%;
+  position: relative;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s opacity;
+    object-fit: cover;
+  }
+
+  h3 {
+    @extend %cat-default-style;
+    position: absolute;
+    display: block;
+    color: $color3;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: 2s opacity;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+
+    h3 {
+      opacity: 1;
+    }
+  }
+}
+.bigger {
+  font-size: 3.5rem !important;
+}
+.realization-popup {
+  cursor: pointer;
+  @include bp(mq600) {
+    margin-bottom: 1rem;
+  }
+}

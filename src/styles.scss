@@ -1,0 +1,677 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/* You can add global styles to this file, and also import other style files */
+// media querys
+
+// colors
+$color1: #0f175a;
+$color2: white; //color for footer text
+$color3: #0f175a; //default text color
+$color4: black; //hover color
+
+//background-colors
+$bg-color1: white;
+$bg-color2: #111111;
+$bg-color3: #f1f2f7;
+$bg-color4: #4a5395;
+
+// fonts family
+$font: 'Oswald', sans-serif;
+$font1: 'Roboto', sans-serif;
+
+// font sizes
+$base-size: calc(1rem + 0.3vmax);
+$text-small: calc(1rem + 0.15vmax);
+$h6-size: calc(1rem + 0.5vmax);
+$h5-size: calc(1rem + 0.7vmax);
+$h4-size: calc(1rem + 1vmax);
+$h3-size: calc(1rem + 1.8vmax);
+$h2-size: calc(1rem + 2.15vmax);
+$h1-size: calc(1.5rem + 2.5vmax);
+
+//text paddings
+$text-pt: 1.5rem; //padding top
+$text-pb: 1.5rem; //padd
+@mixin bp($point) {
+  @if $point == mq1920 {
+    @media screen and (max-width: 1920px) /* up to 1920px */ {
+      @content;
+    }
+  }
+  @if $point == mq1420 {
+    @media screen and (max-width: 1420px) /* up to 1420px */ {
+      @content;
+    }
+  }
+  @if $point == mq1120 {
+    @media screen and (max-width: 1120px) /* up to 1120px */ {
+      @content;
+    }
+  }
+
+  @if $point == mq1024 {
+    @media screen and (max-width: 1024px) /* up to 1024px */ {
+      @content;
+    }
+  }
+  @if $point == mq980 {
+    @media screen and (max-width: 980px) /* up to 980px */ {
+      @content;
+    }
+  }
+  @if $point == mq880 {
+    @media screen and (max-width: 880px) /* up to 880px */ {
+      @content;
+    }
+  }
+
+  @if $point == mq768 {
+    @media screen and (max-width: 768px) /* up to 768px */ {
+      @content;
+    }
+  }
+  @if $point == mq650 {
+    @media screen and (max-width: 650px) /* up to 650px */ {
+      @content;
+    }
+  }
+  @if $point == mq600 {
+    @media screen and (max-width: 600px) /* up to 600px */ {
+      @content;
+    }
+  }
+  @if $point == mq520 {
+    @media screen and (max-width: 520px) /* up to 520px */ {
+      @content;
+    }
+  }
+  @if $point == mq500 {
+    @media screen and (max-width: 500px) /* up to 500px */ {
+      @content;
+    }
+  }
+  @if $point == mq415 {
+    @media screen and (max-width: 415px) /* up to 415px */ {
+      @content;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.35;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+html {
+  font-size: 10px;
+}
+
+h2 {
+  font-family: $font;
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color3;
+  @include bp(mq1920) {
+    font-size: 2.7rem;
+  }
+  @include bp(mq1420) {
+    font-size: 2.5rem;
+  }
+  @include bp(mq1024) {
+    font-size: 2.13rem;
+  }
+  @include bp(mq880) {
+    font-size: 2.5rem;
+  }
+  @include bp(mq520) {
+    font-size: 1.9rem;
+  }
+  @include bp(mq415) {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  font-family: $font1;
+  font-size: 2rem;
+  font-weight: 100;
+  color: $color3;
+  font-weight: 400;
+  @include bp(mq1920) {
+    font-size: 1.76rem;
+  }
+  @include bp(mq1420) {
+    font-size: 1.46rem;
+  }
+  @include bp(mq880) {
+    font-size: 1.36rem;
+  }
+}
+
+//category under-img title
+%cat-default-style {
+  font-family: $font;
+  font-weight: 500;
+  font-size: 2.6rem;
+  @include bp(mq1920) {
+    font-size: 2.3rem;
+  }
+  @include bp(mq1420) {
+    font-size: 2rem;
+  }
+}
+
+//nav fonts
+%nav-default-style {
+  font-family: $font;
+  font-weight: 300;
+  font-size: 3rem;
+  @include bp(mq1920) {
+    font-size: 2.7rem;
+  }
+  @include bp(mq1420) {
+    font-size: 2.4rem;
+  }
+}
+
+//footer fonts
+%footer-default-style {
+  font-family: $font1;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: $color2;
+  @include bp(mq1920) {
+    font-size: 1.3rem;
+  }
+}
+
+//reference fonts
+%reference-default-style {
+  font-family: $font1;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.9rem;
+  @include bp(mq1920) {
+    font-size: 1.6rem;
+  }
+  @include bp(mq1420) {
+    font-size: 1.3rem;
+  }
+}
+
+//button fonts
+%button-default-style {
+  font-family: $font;
+  font-weight: 400;
+  font-size: 3.05rem;
+  text-transform: uppercase;
+  color: $color3;
+  @include bp(mq1920) {
+    font-size: 2.85rem;
+  }
+  @include bp(mq1420) {
+    font-size: 2.55rem;
+  }
+}
+
+//paddings
+.spaced-top {
+  padding-top: 8rem;
+  @include bp(mq768) {
+    padding-top: 4rem;
+  }
+}
+.spaced-bottom {
+  padding-bottom: 8rem;
+  @include bp(mq768) {
+    padding-bottom: 4rem;
+  }
+}
+.spaced-top-small {
+  padding-top: 4rem;
+}
+.spaced-bottom-small {
+  padding-bottom: 4rem;
+}
+.lightdark {
+  background: $bg-color3 !important;
+}
+//text align
+.align-c {
+  text-align: center;
+}
+
+.break-1420 {
+  display: none;
+  @include bp(mq1420) {
+    display: block;
+  }
+}
+.break-500 {
+  display: none;
+  @include bp(mq500) {
+    display: block;
+  }
+}
+
+//position absolute bottom:0
+.absolute-0 {
+  position: absolute;
+  bottom: 0;
+}
+
+//position relative
+.rel {
+  position: relative;
+}
+.container {
+  max-width: 1370px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @include bp(mq1420) {
+    padding: 0 2rem;
+  }
+}
+.full-width {
+  background: $bg-color1;
+  width: 100%;
+}
+.grid-col-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  grid-gap: 3rem;
+
+  @include bp(mq1420) {
+    grid-gap: 1.5rem;
+  }
+
+  @include bp(mq880) {
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+  }
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  grid-gap: 3em;
+
+  @include bp(mq1420) {
+    grid-gap: 1.5rem;
+  }
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  grid-gap: 3em;
+
+  @include bp(mq1420) {
+    grid-gap: 1.5rem;
+  }
+}
+
+.grid-col-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 3em;
+
+  @include bp(mq1420) {
+    grid-gap: 1.5rem;
+  }
+  @include bp(mq1120) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  @include bp(mq980) {
+    grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  }
+  @include bp(mq768) {
+    grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+  }
+  @include bp(mq500) {
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  }
+}
+
+.grid-row-1 {
+  grid-template-rows: 1fr;
+}
+
+.grid-row-4 {
+  grid-template-rows: repeat(4, 1fr);
+  @include bp(mq650) {
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+.button {
+  padding-top: $text-pt;
+  a {
+    @extend %button-default-style;
+    border: 1px solid $color3;
+    padding: 0.75rem 2rem;
+    &:hover {
+      background: $color1;
+      color: $color2;
+      border: 1px solid $color1;
+    }
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.slick-slider {
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+
+  [dir='rtl'] & {
+    float: right;
+  }
+
+  img {
+    display: block;
+  }
+
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+$slick-font-path: './fonts/' !default;
+$slick-font-family: 'slick' !default;
+$slick-loader-path: './' !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: '\2190' !default;
+$slick-next-character: '\2192' !default;
+$slick-dot-character: '\2022' !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+/* Dots */
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-dots {
+  position: absolute;
+  top: 15px;
+  left: 195px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 25%;
+
+  @include bp(mq500) {
+    top: unset;
+    bottom: -30px;
+    width: 90%;
+    left: 0;
+  }
+
+  li {
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+
+    button {
+      border: 0;
+      background: #7f86b9;
+      display: block;
+      height: 10px;
+      width: 10px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        &:before {
+          opacity: $slick-opacity-on-hover;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 10px;
+        height: 10px;
+        line-height: 20px;
+        text-align: center;
+        opacity: $slick-opacity-not-active;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    &.slick-active button:before {
+      background: #2a337a;
+
+      opacity: 1;
+    }
+  }
+}
+mat-sidenav-container {
+  height: 100%;
+}
+mat-sidenav-content {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-img {
+  padding-bottom: $text-pb;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.small {
+  &-img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img {
+      padding-bottom: $text-pb;
+      height: 250px;
+      width: 32%;
+
+      @include bp(mq1024) {
+        height: 200px;
+      }
+
+      @include bp(mq768) {
+        height: 146px;
+      }
+
+      @include bp(mq650) {
+        height: 117px;
+        grid-row: 3;
+      }
+
+      @include bp(mq500) {
+        height: 91px;
+        grid-row: 3;
+      }
+    }
+  }
+}
+.single-item {
+  position: relative;
+
+  .container {
+    padding: 0 !important;
+  }
+}
+.single-item-text {
+  text-align: left;
+  grid-column: 1/-1;
+  padding-left: $text-pb;
+  border-left: 1rem solid $color1;
+
+  p:first-child {
+    @extend %cat-default-style;
+    padding-bottom: $text-pb;
+  }
+}
+
+.project-nav {
+  display: inline-block;
+  margin: 10px;
+  .paginate {
+    background: white;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+  }
+  .active {
+    background: $color1;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+.single-back {
+  position: absolute;
+  color: #0f175a;
+  font-size: 2rem;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+}
+.close p {
+  color: #f1f2f7;
+}

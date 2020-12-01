@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+footer {
+  background: $bg-color4 !important;
+}
+.footer {
+  p {
+    @extend %footer-default-style;
+  }
+  li {
+    @extend %footer-default-style;
+    display: inline-block;
+  }
+  a {
+    color: $color2;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .ver-line {
+    color: $color2;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    vertical-align: top;
+  }
+
+  @include bp(mq1024) {
+    display: block;
+    text-align: center;
+  }
+}

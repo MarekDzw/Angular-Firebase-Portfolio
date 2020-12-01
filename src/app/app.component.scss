@@ -1,0 +1,47 @@
+.hide {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+  .burger-wrapper {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    .burger {
+      width: 35px;
+      height: 5px;
+      background: white;
+      margin: 5px 0;
+      @media (max-width: 450px) {
+        width: 30px;
+        height: 4px;
+        margin: 4px 0;
+      }
+      @media (max-width: 350px) {
+        width: 25px;
+        height: 3px;
+        margin: 3px 0;
+      }
+    }
+  }
+}
+.side-nav {
+  background: black;
+  .close {
+    height: 14rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 2.6rem;
+      padding: 1rem;
+      font-weight: bold;
+    }
+  }
+  li {
+    font-size: 2.6rem;
+    padding: 1rem 2rem;
+    margin: 0rem 1rem;
+  }
+}

@@ -1,0 +1,31 @@
+<div name="portfolio-items" class="full-width align-c spaced-bottom spaced-top">
+  <div
+    class="container"
+    *ngFor="let item of category; let first = first"
+    [ngClass]="{ first: first }"
+  >
+    <h2 class="spaced-bottom spaced-top-small" *ngIf="first">
+      {{ name }}
+    </h2>
+  </div>
+  <div class="container">
+    <div class="contaier grid-col-4 spaced-bottom">
+      <div *ngFor="let item of category; let i = index">
+        <div
+          class="portfolio-item realization-popup"
+          (click)="openDialog($event)"
+          [attr.data-index]="i"
+        >
+          <img
+            [attr.data-index]="i"
+            [src]="item.mainImage"
+            [alt]="item.title"
+          />
+          <h3 [attr.data-index]="i" class="bigger">{{ item.title }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="button spaced-bottom"><a routerLink="/"> Powrót </a></div>
+</div>

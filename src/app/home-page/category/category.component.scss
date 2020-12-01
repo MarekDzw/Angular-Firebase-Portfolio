@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+.category {
+  &:hover .line-active {
+    visibility: hidden;
+  }
+}
+.category-item {
+  position: relative;
+  @include bp(mq768) {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    padding-bottom: $text-pb;
+  }
+  img {
+    padding-bottom: $text-pb;
+  }
+  &:hover .under-img-line {
+    visibility: visible;
+  }
+
+  .under-img-line {
+    width: 5rem;
+    height: 1rem;
+    background: $color1;
+    margin: $text-pb 0;
+    visibility: hidden;
+    position: absolute;
+    @include bp(mq768) {
+      visibility: visible;
+    }
+  }
+
+  .line-active {
+    width: 5rem;
+    height: 1rem;
+    background: $color1;
+    margin: $text-pb 0;
+  }
+  .line-empty {
+    width: 5rem;
+    height: 1rem;
+
+    margin: $text-pb 0;
+  }
+  .under-img-text {
+    padding-bottom: $text-pb;
+    margin-bottom: 7.6rem;
+    letter-spacing: 0.2px;
+    @include bp(mq768) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .button {
+    @include bp(mq768) {
+      position: static;
+      padding-top: 0;
+    }
+  }
+}

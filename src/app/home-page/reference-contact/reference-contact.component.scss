@@ -1,0 +1,111 @@
+@import '../../../styles.scss';
+.circle {
+  width: 23px;
+  height: 23px;
+  top: 30%;
+  transform: translateY(-50%);
+  left: 0;
+  position: absolute;
+  border-radius: 50%;
+
+  img {
+    width: 90%;
+    height: 90%;
+  }
+  @include bp(mq880) {
+    width: 13px;
+    height: 13px;
+  }
+  @include bp(mq768) {
+    width: 23px;
+    height: 23px;
+  }
+}
+.con-ref {
+  @include bp(mq768) {
+    display: block;
+  }
+}
+
+.contact {
+  .grid-col-2 {
+    grid-column-gap: 0;
+    @include bp(mq768) {
+      display: block;
+    }
+  }
+  @include bp(mq500) {
+    margin-top: 60px;
+  }
+  h2 {
+    padding-bottom: $text-pb;
+  }
+
+  &-items {
+    padding-top: $text-pb;
+    a {
+      color: $color1 !important;
+    }
+    p {
+      position: relative;
+      padding-left: 3rem;
+      padding-bottom: $text-pb;
+      @include bp(mq880) {
+        padding-left: 1.7rem;
+      }
+      @include bp(mq768) {
+        padding-left: 2.7rem;
+      }
+    }
+    @include bp(mq768) {
+      &:last-child {
+        padding-top: 0;
+      }
+    }
+  }
+  @include bp(mq768) {
+    padding-top: $text-pb;
+  }
+}
+.sliders {
+  @include bp(mq768) {
+    height: 41%;
+  }
+  @include bp(mq500) {
+    height: 43%;
+  }
+}
+.reference {
+  h2 {
+    padding-bottom: $text-pb;
+  }
+  &-items {
+    padding: 0 0.5rem;
+    padding-top: $text-pb;
+    p {
+      @extend %reference-default-style;
+    }
+    @include bp(mq1024) {
+      text-align: center;
+    }
+  }
+  &-img {
+    vertical-align: top;
+    display: inline-block;
+    width: 29%;
+    padding-right: $text-pb;
+    @include bp(mq1024) {
+      width: 100%;
+      padding: 0;
+      padding-bottom: $text-pb;
+    }
+  }
+  &-text {
+    display: inline-block;
+    width: 69%;
+    @include bp(mq1024) {
+      text-align: left;
+      width: 100%;
+    }
+  }
+}

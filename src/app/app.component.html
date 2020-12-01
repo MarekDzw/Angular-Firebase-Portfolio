@@ -1,0 +1,29 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close()">
+  <mat-sidenav
+    #sidenav
+    class="side-nav"
+    position="end"
+    (keydown.escape)="close()"
+    disableClose
+  >
+    <div class="close"><p (click)="close()">X</p></div>
+    <ul>
+      <li><a (click)="close()" href="#realization">realizacje</a></li>
+      <li><a (click)="close()" href="#about">o mnie</a></li>
+      <li><a (click)="close()" href="#skill">umiejętności</a></li>
+      <li><a (click)="close()" href="#contact">kontakt</a></li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="hide">
+      <div (click)="sidenav.open()" class="burger-wrapper">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+      </div>
+    </div>
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

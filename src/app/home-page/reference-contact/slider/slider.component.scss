@@ -1,0 +1,44 @@
+@import '../../../../styles.scss';
+.sliders{
+  @include bp(mq768){
+      height: 41%;
+  }
+  @include bp(mq500) {
+     height: 43%;
+  }
+}
+.reference{
+    margin-bottom: 2rem;
+  h2{
+      padding-bottom: $text-pb;
+  }
+  &-items{
+      padding: 0 .5rem;
+      padding-top: $text-pb;
+      p{
+        @extend  %reference-default-style;
+      }
+      @include bp(mq1024){
+          text-align: center;
+      }
+  }
+  &-img{
+      vertical-align: top;
+      display: inline-block;
+      width: 29%;
+      padding-right: $text-pb;
+      @include bp(mq1024){
+       width: 100%;
+       padding: 0;
+       padding-bottom: $text-pb;
+      }
+  }
+  &-text{
+      display: inline-block;
+      width: 69%;
+      @include bp(mq1024){
+        text-align: left;
+         width: 100%;
+      }
+  }
+}

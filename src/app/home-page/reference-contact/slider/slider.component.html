@@ -1,0 +1,17 @@
+<div class="reference rel">
+  <h2>Co o mnie mówią?</h2>
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem class="sliders" *ngFor="let reference of reference">
+      <div class="reference-items">
+        <div class="reference-img">
+          <img [src]="reference.imagePath" alt="Typek">
+        </div>
+        <div class="reference-text">
+          <p>
+            {{reference.text}}
+          </p>
+          <p>- {{reference.name}}</p>
+        </div>
+      </div>
+    </div>
+  </ngx-slick-carousel>

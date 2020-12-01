@@ -1,0 +1,167 @@
+
+#preloader {
+ position: fixed;
+ z-index: 1111;
+    width: 100%;
+    height: 100%;
+    background: black;
+    
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 30%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@import '../../../styles.scss';
+
+header {
+    background: $bg-color1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    width: 40%;
+    display: inline-block;
+    img {
+      width: 320px;
+      vertical-align: middle;
+    }
+    @include bp(mq880) {
+      width: 34%;
+    }
+    @include bp(mq768) {
+      width: 80%;
+    }
+  }
+  .nav {
+  @extend %nav-default-style;
+  width: 59%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+
+  @include bp(mq880) {
+    width: 65%;
+  }
+
+  @include bp(mq768) {
+    width: 19%;
+  }
+
+  #nav {
+    @include bp(mq768) {
+      display: none;
+      background: black;
+      position: absolute;
+      top: 150px;
+      vertical-align: -webkit-baseline-middle;
+      bottom: 0;
+      right: 0;
+      text-align: left;
+      overflow: hidden;
+      z-index: 10000;
+      left: 100%;
+      transition: 0.2s left linear;
+    }
+  }
+
+  li {
+    padding-left: 2.8rem;
+    display: inline-block;
+
+    @include bp(mq1420) {
+      padding-left: 1rem;
+    }
+
+    @include bp(mq768) {
+      display: block;
+    }
+  }
+
+  a {
+    color: $color3;
+    vertical-align: -webkit-baseline-middle;
+
+    &:hover {
+      color: $color1;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  @include bp(mq768){
+      display: inline-block;
+      cursor: pointer;
+  }
+ 
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+

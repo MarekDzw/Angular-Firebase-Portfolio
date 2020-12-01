@@ -1,0 +1,97 @@
+@import '../../../styles.scss';
+
+header {
+  background: $bg-color3;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 40%;
+  display: inline-block;
+  img {
+    width: 320px;
+    vertical-align: middle;
+  }
+  @include bp(mq880) {
+    width: 34%;
+  }
+  @include bp(mq768) {
+    width: 80%;
+  }
+}
+.nav {
+  @extend %nav-default-style;
+  width: 59%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  padding-bottom: 20px;
+
+  @include bp(mq880) {
+    width: 65%;
+  }
+
+  @include bp(mq768) {
+    width: 19%;
+  }
+  .hover-bold:hover {
+    font-weight: 500;
+  }
+  #nav {
+    @include bp(mq768) {
+      display: none;
+      background: black;
+      position: absolute;
+      top: 150px;
+      vertical-align: -webkit-baseline-middle;
+      bottom: 0;
+      right: 0;
+      text-align: left;
+      overflow: hidden;
+      z-index: 10000;
+      left: 100%;
+      transition: 0.2s left linear;
+    }
+  }
+
+  li {
+    padding-left: 3.8rem;
+    display: inline-block;
+
+    @include bp(mq1420) {
+      padding-left: 1rem;
+    }
+
+    @include bp(mq768) {
+      display: block;
+    }
+  }
+
+  a {
+    color: $color3;
+    vertical-align: -webkit-baseline-middle;
+
+    &:hover {
+      color: $color1;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  @include bp(mq768) {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}

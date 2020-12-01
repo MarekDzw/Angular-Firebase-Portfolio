@@ -1,0 +1,108 @@
+<div class="full-width spaced-bottom spaced-top">
+  <div class="container height">
+    <button class="logout" mat-button color="primary" routerLink="/panel/admin">
+      Powrót
+    </button>
+    <form #form class="example-form">
+      <mat-label>Dodaj realizacje</mat-label>
+
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          name="title"
+          placeholder="Tytuł realizacji"
+          type="text"
+          [(ngModel)]="realization.title"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          type="text"
+          name="longTitle"
+          placeholder="Dłuższy tytuł (pod zdjęcia)"
+          [(ngModel)]="realization.longTitle"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <textarea
+          matInput
+          type="text"
+          name="description"
+          placeholder="Opis realizacji"
+          [(ngModel)]="realization.description"
+        ></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-select
+          name="category"
+          (selectionChange)="categoryName($event)"
+          placeholder="Kategoria"
+        >
+          <mat-option value="identyfikacja-wizualna"
+            >Identyfikacja wizualna</mat-option
+          >
+          <mat-option value="ilustracje-modele"
+            >Ilustracje i modele 3D</mat-option
+          >
+          <mat-option value="web-design">Web design</mat-option>
+          <mat-option value="projekty-poligraficzne"
+            >Projekty poligraficzne</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <mat-label>Dodaj zdjęcie główne </mat-label>
+      <input
+        type="file"
+        name="file"
+        (change)="getMainImage($event)"
+        [(ngModel)]="realization.mainImage"
+      />
+
+      <div class="example-full-width btn">
+        <button mat-button color="primary" (click)="addRealization(form)">
+          Dodaj realizacje
+        </button>
+      </div>
+    </form>
+    <div class="space"></div>
+
+    <mat-accordion *ngFor="let item of realizationList; let first = first">
+      <mat-expansion-panel *ngIf="!first" multi="true">
+        <mat-expansion-panel-header multi="true">
+          <mat-panel-title>
+            <h2>{{ item.title }} - {{ item.category }}</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div>
+          <h3>Główne zdjęcie</h3>
+          <img
+            [src]="item.mainImage"
+            #mainImage
+            alt="{{ item.title }}"
+            style="width: 50%"
+          />
+          <div>
+            <h3>Długi tytuł</h3>
+            {{ item.longTitle }}
+          </div>
+          <div>
+            <h3>Opis</h3>
+            {{ item.description }}
+          </div>
+        </div>
+        <mat-action-row>
+          <button
+            mat-button
+            color="warn"
+            (click)="deleteRealization($event, item, mainImage.src)"
+          >
+            Delete
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

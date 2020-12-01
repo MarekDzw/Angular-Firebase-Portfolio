@@ -1,0 +1,16 @@
+<div name="single-item" class="full-width single-item align-c">
+  <div class="container">
+    <div class="contaier spaced-bottom spaced-top-small">
+      <div class="main-img">
+        <img [src]="data.data[data.i].mainImage" alt="bigone" />
+      </div>
+      <div class="single-item-text">
+        <span>
+          <p>{{ data.data[data.i].longTitle }}</p>
+          <p>{{ data.data[data.i].description }}</p>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="single-back" (click)="onNoClick()">X</div>
+</div>

@@ -1,0 +1,90 @@
+@import '../../../styles.scss';
+.about {
+  @include bp(mq880) {
+    display: block;
+  }
+  @include bp(mq600) {
+    padding-bottom: $text-pb;
+  }
+}
+#about {
+  background-image: url(../../../assets/img/snow.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: right -29px bottom -57px !important;
+}
+.about-img {
+  text-align: left;
+  img {
+    height: fit-content;
+    @include bp(mq600) {
+      width: unset;
+      height: unset;
+    }
+  }
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+
+  & p:first-child {
+    @extend %cat-default-style;
+    padding-bottom: $text-pb;
+
+    @include bp(mq880) {
+      padding-top: $text-pb;
+    }
+  }
+
+  & p:last-child {
+    padding-top: $text-pt;
+    @extend %cat-default-style;
+
+    a {
+      color: $color3;
+
+      &:hover {
+        color: $color1;
+      }
+    }
+
+    @include bp(mq880) {
+      position: static;
+    }
+  }
+}
+.about-skill {
+  @include bp(mq600) {
+    display: block;
+  }
+}
+
+.skill {
+  @include bp(mq600) {
+    margin-top: 60px;
+  }
+  h2 {
+    padding-bottom: $text-pb;
+    margin-top: -1rem;
+  }
+  p {
+    padding-bottom: $text-pb;
+  }
+}
+.adobe-icon {
+  img {
+    margin: $text-pb;
+    margin-bottom: 0;
+    width: 50px;
+    &:first-child {
+      margin-left: 0;
+    }
+    @include bp(mq768) {
+      margin: 0.9rem;
+      margin-bottom: 0;
+    }
+  }
+}
+.other-skill-icon {
+  @extend .adobe-icon;
+}

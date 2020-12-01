@@ -1,0 +1,17 @@
+<div class="full-width spaced-bottom spaced-top">
+  <div class="container height">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="email" name="email" [(ngModel)]="credentials.email">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput type="password" name="passowrd" [(ngModel)]="credentials.password" placeholder="password">
+      </mat-form-field>
+    </form>
+    <div>
+      <button mat-button color="primary" (click)="login()">Zaloguj się</button>
+    </div>
+
+  </div>
+</div>
