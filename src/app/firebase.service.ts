@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import {
   AngularFirestore,
-  AngularFirestoreDocument
-} from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { CategoryItem } from './models/CategoryItem';
-import { AngularFireStorage } from '@angular/fire/storage';
-import { finalize } from 'rxjs/operators';
+  AngularFirestoreDocument,
+} from "@angular/fire/firestore";
+import { Observable } from "rxjs";
+import { CategoryItem } from "./models/CategoryItem";
+import { AngularFireStorage } from "@angular/fire/storage";
+import { finalize } from "rxjs/operators";
 
 @Injectable()
 export class FirebaseService {
@@ -40,15 +40,12 @@ export class FirebaseService {
       name: reference.name,
       text: reference.text,
       imagePath: this.referenceImage,
-      id: id
+      id: id,
     };
-    if (this.referenceImage == '') {
+    if (this.referenceImage == "") {
       return;
     }
-    this.db
-      .collection('reference')
-      .doc(id)
-      .set(references);
+    this.db.collection("reference").doc(id).set(references);
   }
 
   uploadImage(filePath, file) {
@@ -58,7 +55,7 @@ export class FirebaseService {
       .percentageChanges()
       .pipe(
         finalize(() => {
-          ref.getDownloadURL().subscribe(url => {
+          ref.getDownloadURL().subscribe((url) => {
             this.referenceImage = url;
           });
         })
@@ -67,7 +64,7 @@ export class FirebaseService {
   }
 
   getReference() {
-    this.reference = this.db.collection('reference').valueChanges();
+    this.reference = this.db.collection("reference").valueChanges();
     return this.reference;
   }
 
@@ -90,7 +87,7 @@ export class FirebaseService {
       longTitle: realization.longTitle,
       mainImage: this.realizationMainImage,
       description: realization.description,
-      category: path
+      category: path,
     };
     if (realization.mainImage == null) {
       return;
@@ -105,14 +102,14 @@ export class FirebaseService {
     }
   }
   uploadRealizationMainImage(file) {
-    const path = 'realizacje/' + Math.random() * 5 + file.name;
+    const path = "realizacje/" + Math.random() * 5 + file.name;
     const ref = this.storage.ref(path);
     ref
       .put(file)
       .percentageChanges()
       .pipe(
         finalize(() => {
-          ref.getDownloadURL().subscribe(url => {
+          ref.getDownloadURL().subscribe((url) => {
             this.realizationMainImage = url;
           });
         })
