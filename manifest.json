@@ -5,7 +5,7 @@
   "background_color": "black",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://marekdzw.github.io/Angular-Firebase-Portfolio/",
+  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/ico72.png",
