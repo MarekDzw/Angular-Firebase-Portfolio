@@ -7,12 +7,12 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "https://marekdzw.github.io/Angular-Firebase-Portfolio/4.1f2a9e4e1eac3eefdcbf.js",
+        "https://marekdzw.github.io/Angular-Firebase-Portfolio/4.f895561605d27fa6b976.js",
         "https://marekdzw.github.io/Angular-Firebase-Portfolio/favicon.ico",
         "https://marekdzw.github.io/Angular-Firebase-Portfolio/index.html",
         "https://marekdzw.github.io/Angular-Firebase-Portfolio/main.5ea49a94505b9c19de6b.js",
         "https://marekdzw.github.io/Angular-Firebase-Portfolio/polyfills.9f83624c7bb370dcef03.js",
-        "https://marekdzw.github.io/Angular-Firebase-Portfolio/runtime.69674f7260fbf6dbe001.js",
+        "https://marekdzw.github.io/Angular-Firebase-Portfolio/runtime.be00d29139d51a4f4494.js",
         "https://marekdzw.github.io/Angular-Firebase-Portfolio/scripts.e9d123e29c679f57c43d.js",
         "https://marekdzw.github.io/Angular-Firebase-Portfolio/styles.ed6aada5ccf1476cf8c5.css"
       ],
@@ -64,7 +64,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://marekdzw.github.io/Angular-Firebase-Portfolio/4.1f2a9e4e1eac3eefdcbf.js": "d514b09d5dff2e75662b6185184667e4a9f88dc2",
+    "https://marekdzw.github.io/Angular-Firebase-Portfolio/4.f895561605d27fa6b976.js": "7f772b6a277a9787347382a88de1f489cb748444",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/assets/icons/ico128.png": "2a4198f5a091aee10243d8dfda54edfb431b20a1",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/assets/icons/ico144.png": "f78a060fa629881e927cf5aabdf0c13305884128",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/assets/icons/ico152.png": "e3a4756b6b253d30d7eae265a1394df63ff4a08b",
@@ -98,10 +98,10 @@
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/assets/img/typek.png": "38e00dfc1e18629a05887523ff7d258121435852",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/assets/img/web-design.jpg": "05f87668f8110806d66998cd69384501f948c91e",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/favicon.ico": "467cf1a17f204560b04268f788e9fb1ed3c85714",
-    "https://marekdzw.github.io/Angular-Firebase-Portfolio/index.html": "4e91a6a7563be6243cab448b052a995167ecf649",
+    "https://marekdzw.github.io/Angular-Firebase-Portfolio/index.html": "f57d512a55dae78c381647caf9bd5b2b0c0ef81d",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/main.5ea49a94505b9c19de6b.js": "9c7783a539afb844a6cb257e323d947f8765a640",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/polyfills.9f83624c7bb370dcef03.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
-    "https://marekdzw.github.io/Angular-Firebase-Portfolio/runtime.69674f7260fbf6dbe001.js": "d4337f5b2f65a1548743dababbb81d9df7538ca0",
+    "https://marekdzw.github.io/Angular-Firebase-Portfolio/runtime.be00d29139d51a4f4494.js": "a4634e2bbb6762086ee1807a0a9317fc7a625265",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/scripts.e9d123e29c679f57c43d.js": "a8a0b81b6cc198f9c5c0b54294b05459128e9e2b",
     "https://marekdzw.github.io/Angular-Firebase-Portfolio/styles.ed6aada5ccf1476cf8c5.css": "ae4c34fabd370b5301aafed3bda0f4d77d023172"
   },
